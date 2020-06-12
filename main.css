@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.carousel-outer{
+max-width: 19vw;
+ overflow: hidden;
+margin: auto;
+margin-top: 35vh;
+position: relative;
+}
+.carousel-inner{
+    display: flex;
+    width: 100%;
+}
+#prevbtn{
+    position: absolute;
+    top:50%;
+    z-index: 1;
+color: white;
+}
+#nextbtn{
+    position: absolute;
+    top:50%;
+    z-index: 1;
+    right: 0;
+    color: white;
+}
+#prevbtn:hover,#nextbtn:hover{
+    transform: scale(1.3);
+    cursor: pointer;
+
+}
+@media only screen and (max-width:400px){
+    .carousel-outer{
+        max-width: 80vw;
+        
+        }
+}
