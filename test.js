@@ -2,7 +2,8 @@ const container = document.querySelector(".carousel-inner");
 const img = document.querySelectorAll(".carousel-inner img");
 const prev = document.querySelector("#prevbtn");
 const next = document.querySelector("#nextbtn");
-let counter = 1;
+const body = document.querySelector("body");
+ let counter = 1;
 
 
 //start with 1st image
@@ -15,7 +16,6 @@ next.addEventListener("click",()=>{
     counter++;
     container.style.transition = `transform 0.4s ease-in-out`
     container.style.transform = `translateX(${-size*counter}px)`;
-
 
 })
 prev.addEventListener("click",()=>{
@@ -38,7 +38,4 @@ container.addEventListener("transitionend",()=>{
         counter = img.length -2;
         container.style.transform = `translateX(${-size*counter}px)`;
     }
-        
-
-
 })
